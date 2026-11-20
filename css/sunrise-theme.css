@@ -1,0 +1,382 @@
+/* =====================================================================
+   SUNRISE THEME — loaded LAST on every page
+   Honey orange + white · modern serif/sans type · one button style
+   To change the look site-wide, edit the variables below.
+===================================================================== */
+:root {
+  --honey: #ED8B24;
+  --honey-dark: #D67A12;
+  --honey-deep: #B8620A;
+  --honey-light: #F6B94D;
+  --honey-soft: #FFF4E3;
+  --cream: #FAF9F7;
+  --ink: #2B2118;
+  --ink-soft: #6B5D4F;
+  --line: #EFE5D5;
+
+  --font-body: 'DM Sans', 'Noto Sans Bengali', 'Hind Siliguri', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Outfit', 'Noto Sans Bengali', system-ui, sans-serif;
+}
+
+/* ---------- 1. TYPOGRAPHY ---------- */
+body, button, input, select, textarea {
+  font-family: var(--font-body) !important;
+}
+h1, h2, h3,
+.hero-content h1,
+.about-page-heading h1,
+.stat-item strong,
+.about-mini-stats strong,
+.highlight-card strong {
+  font-family: var(--font-display) !important;
+  letter-spacing: -0.01em;
+}
+h1, h2 { font-weight: 600; }
+.hero-content h1 { font-size: clamp(36px, 4.7vw, 60px); font-weight: 700; line-height: 1.15; }
+.header .nav-links > a,
+.header .nav-links > .nav-dropdown > .nav-parent,
+.header .nav-submenu a,
+.header .nav-apply { font-family: var(--font-body) !important; }
+
+/* ---------- 2. BUTTONS — one rounded honey-orange style everywhere ---------- */
+html:root :is(.btn, .btn-orange, .btn-outline, .btn-outline-dark, .about-button, .programs-view-all, .faculty-cta a, .facility-cta, .programs-page-cta a, .primary-btn, .secondary-btn, .primary-button, .contact-btn, .direction-btn, .submit-btn, .schedule-search-btn, .notice-view-btn, .modal-download, .download-routine, .download-calendar, .download-btn, .btn-library-open, .document-download, .header .nav-apply) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: var(--honey) !important;
+  color: #fff !important;
+  border: 2px solid var(--honey) !important;
+  border-radius: 999px !important;
+  font-family: var(--font-body) !important;
+  font-weight: 700 !important;
+  letter-spacing: .1px;
+  line-height: 1.2 !important;
+  text-decoration: none !important;
+  box-shadow: 0 8px 18px rgba(237, 139, 36, .26) !important;
+  cursor: pointer;
+  transition: background .25s ease, border-color .25s ease, transform .25s ease, box-shadow .25s ease !important;
+}
+html:root :is(.btn, .btn-orange, .btn-outline, .btn-outline-dark, .about-button, .programs-view-all, .faculty-cta a, .facility-cta, .programs-page-cta a, .primary-btn, .secondary-btn, .primary-button) {
+  min-height: 50px;
+  padding: 13px 30px !important;
+  font-size: 15px !important;
+}
+html:root :is(.contact-btn, .direction-btn, .submit-btn, .schedule-search-btn, .notice-view-btn, .modal-download, .download-routine, .download-calendar, .download-btn, .btn-library-open, .document-download) {
+  min-height: 44px;
+  padding: 11px 24px !important;
+  font-size: 14px !important;
+}
+html:root :is(.btn, .btn-orange, .btn-outline, .btn-outline-dark, .about-button, .programs-view-all, .faculty-cta a, .facility-cta, .programs-page-cta a, .primary-btn, .secondary-btn, .primary-button, .contact-btn, .direction-btn, .submit-btn, .schedule-search-btn, .notice-view-btn, .modal-download, .download-routine, .download-calendar, .download-btn, .btn-library-open, .document-download, .header .nav-apply):hover {
+  background: var(--honey-dark) !important;
+  border-color: var(--honey-dark) !important;
+  color: #fff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 24px rgba(237, 139, 36, .36) !important;
+}
+html:root :is(.submit-btn:disabled, .schedule-search-btn:disabled) {
+  opacity: .55; cursor: not-allowed; transform: none !important; box-shadow: none !important;
+}
+html:root :is(.header .nav-apply) { height: 49px !important; padding: 0 24px !important; }
+
+/* filter chips / tabs: same rounded shape, honey when selected */
+.category-btn, .notice-tab {
+  border-radius: 999px !important;
+  border: 2px solid var(--honey) !important;
+  background: #fff !important;
+  color: var(--honey-deep) !important;
+  font-weight: 700 !important;
+  transition: background .25s ease, color .25s ease !important;
+}
+.category-btn:hover, .notice-tab:hover,
+.category-btn.active, .notice-tab.active {
+  background: var(--honey) !important;
+  color: #fff !important;
+}
+
+/* ---------- 3. HERO SLIDER — no blue, no flash between photos ---------- */
+.hero-slider {
+  background: #1d150c !important;
+  isolation: isolate;
+}
+.hero-slide {
+  opacity: 1 !important;
+  visibility: hidden !important;
+  transition: none !important;
+  z-index: -3;
+}
+.hero-slide.prev   { visibility: visible !important; z-index: -2; }
+.hero-slide.active { visibility: visible !important; z-index: -1; animation: heroFadeIn .7s ease both; }
+.hero-slide.active.instant { animation: none; }
+@keyframes heroFadeIn { from { opacity: 0; } to { opacity: 1; } }
+.hero-overlay {
+  background: linear-gradient(90deg, rgba(24, 14, 4, .80) 0%, rgba(24, 14, 4, .50) 45%, rgba(24, 14, 4, .08) 100%) !important;
+}
+
+/* feature strip under the hero: white + honey instead of navy */
+.feature-strip { background: #fff !important; border-bottom: 1px solid var(--line); }
+.feature-item { border-right: 1px solid var(--line) !important; }
+.feature-item:last-child { border-right: none !important; }
+.feature-icon { border-color: var(--honey) !important; color: var(--honey) !important; background: var(--honey-soft); }
+.feature-item h4 { color: var(--ink) !important; font-size: 14px !important; }
+.feature-item p { color: var(--ink-soft) !important; }
+
+/* ---------- 4. LOGO (nav + footer) ---------- */
+.header .brand { gap: 12px !important; }
+.header .brand .logo-img.logo-sun {
+  width: 66px !important;           /* current 64px + 2px */
+  height: auto !important;
+  max-height: 66px;
+  object-fit: contain !important;
+}
+.header .brand .logo-sub {
+  display: block;
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+}
+@media (max-width: 1000px) and (min-width: 901px) { .header .brand .logo-sub { display: none; } }
+@media (max-width: 900px) { .header .brand .logo-sub { height: 38px; } }
+@media (max-width: 400px) { .header .brand .logo-sub { display: none; } }
+
+.site-footer .footer-brand .footer-logo img {
+  width: 117.5px !important;        /* current 115.5px + 2px */
+  height: auto !important;
+  object-fit: contain !important;
+}
+.site-footer .footer-brand .footer-subtitle { margin-top: 10px !important; }
+.site-footer .footer-brand .footer-subtitle img {
+  width: 170px !important;
+  height: auto !important;
+  max-height: none !important;
+}
+
+/* ---------- 5. FOOTER — warm off-white (#FAF9F7), same content ---------- */
+.site-footer {
+  background: var(--cream) !important;
+  color: var(--ink) !important;
+  border-top: 1px solid var(--line) !important;
+}
+.site-footer .footer-column h3 {
+  color: var(--ink) !important;
+  font-family: var(--font-display) !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+.site-footer .footer-column li,
+.site-footer .footer-column li a { color: var(--ink-soft) !important; font-family: var(--font-body) !important; }
+.site-footer .footer-column li a:hover { color: var(--honey-deep) !important; }
+.site-footer .footer-contact .contact-icon { color: var(--honey) !important; }
+.site-footer .footer-socials a {
+  width: 40px; height: 40px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--line);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.site-footer .footer-socials a img { width: 22px !important; height: 22px !important; object-fit: contain; display: block; }
+.site-footer .footer-socials a:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(43,33,24,.12); }
+.site-footer .footer-bottom { border-top: 1px solid var(--line) !important; }
+.site-footer .footer-bottom p { color: #8A7B6B !important; }
+
+/* ---------- 6. ABOUT PAGE ---------- */
+/* leadership photo cards: 20% narrower so they read as portrait cards */
+.about-person-image {
+  width: 80% !important;
+  justify-self: center;
+  border-radius: 14px !important;
+  box-shadow: 0 14px 34px rgba(43, 33, 24, .14);
+}
+
+/* vision panel — premium dark + honey glow */
+.about-vision-panel {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  width: min(1180px, 90%) !important;
+  margin: 70px auto 90px !important;
+  padding: 88px 8% 84px !important;
+  border-radius: 28px !important;
+  color: #fff;
+  background:
+    radial-gradient(900px 380px at 50% -12%, rgba(237, 139, 36, .38), transparent 62%),
+    radial-gradient(520px 320px at 100% 110%, rgba(246, 185, 77, .18), transparent 65%),
+    linear-gradient(145deg, #1d150c 0%, #2B2118 55%, #3b2a17 100%) !important;
+  box-shadow: 0 34px 80px rgba(43, 33, 24, .30), inset 0 0 0 1px rgba(246, 185, 77, .28);
+}
+.about-vision-panel::before {            /* soft sun rays behind the content */
+  content: "";
+  position: absolute; left: 50%; top: -55%;
+  width: 1100px; height: 1100px; transform: translateX(-50%);
+  background: repeating-conic-gradient(from 0deg, rgba(246, 185, 77, .10) 0deg 4deg, transparent 4deg 15deg);
+  -webkit-mask-image: radial-gradient(circle at center, #000 0%, transparent 62%);
+          mask-image: radial-gradient(circle at center, #000 0%, transparent 62%);
+  z-index: -1; pointer-events: none;
+}
+.about-vision-panel::after {             /* thin gold inner frame */
+  content: "";
+  position: absolute; inset: 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(246, 185, 77, .20);
+  pointer-events: none; z-index: -1;
+}
+.about-vision-content { position: relative; max-width: 820px !important; }
+.about-vision-content .about-eyebrow {
+  color: var(--honey-light) !important;
+  letter-spacing: 4px !important;
+  display: inline-flex; align-items: center; gap: 16px;
+}
+.about-vision-content .about-eyebrow::before,
+.about-vision-content .about-eyebrow::after {
+  content: ""; width: 44px; height: 1px; background: linear-gradient(90deg, transparent, var(--honey-light));
+}
+.about-vision-content .about-eyebrow::after { transform: scaleX(-1); }
+.vision-symbol {
+  width: 68px; height: 68px; margin: 8px auto 20px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  font-size: 26px; color: #fff;
+  background: radial-gradient(circle at 35% 30%, #F9C86A, var(--honey) 62%, var(--honey-deep));
+  box-shadow: 0 0 0 8px rgba(237, 139, 36, .16), 0 0 46px rgba(237, 139, 36, .55);
+}
+.about-vision-content h2 {
+  color: #fff !important;
+  font-size: clamp(34px, 4.6vw, 58px) !important;
+  line-height: 1.12 !important;
+  margin: 8px 0 22px !important;
+}
+.about-vision-content h2 span {
+  background: linear-gradient(90deg, #F9C86A, var(--honey));
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent !important;
+}
+.about-vision-content p {
+  color: rgba(255, 255, 255, .80) !important;
+  font-size: 17px !important;
+  line-height: 1.85 !important;
+  max-width: 680px; margin: 0 auto 32px !important;
+}
+
+/* ---------- 7. CARD BADGES REMOVED ---------- */
+.program-image .program-number,
+.faculty-photo .faculty-number { display: none !important; }
+
+/* ---------- 8. WARM-UP FOR LEFTOVER COOL TONES ---------- */
+::selection { background: var(--honey); color: #fff; }
+a { -webkit-tap-highlight-color: rgba(237, 139, 36, .2); }
+
+/* ---------- NAV: every top-level link has the same weight, no caret ---------- */
+html:root .header .nav-links > a,
+html:root .header .nav-links > .nav-dropdown > .nav-parent {
+  font-weight: 600 !important;
+  font-size: 14px !important;
+}
+html:root .header .nav-dropdown { gap: 0 !important; }
+
+/* =====================================================================
+   MOBILE NAV (<=900px) — top gap, single row, flat menu list
+   Loaded last on every page. Desktop (>900px) is untouched.
+   ===================================================================== */
+@media (max-width: 900px) {
+  /* 1. Header: gap on top first, then logo + buttons start below it */
+  html:root #header.header {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 14px 0 10px !important;
+  }
+  html:root #header .container.navbar {
+    position: static !important;          /* menu panel anchors to the header */
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    height: 58px !important;
+    min-height: 58px !important;
+    width: calc(100% - 32px) !important;
+  }
+  html:root #header .brand { margin-right: auto !important; min-width: 0 !important; flex: 0 1 auto !important; }
+  html:root #header .brand .logo-img.logo-sun { width: 56px !important; max-height: 56px !important; }
+  html:root #header .brand .logo-sub { height: 34px !important; }
+
+  /* Apply Now + hamburger sit together on the right, same row */
+  html:root #header .nav-apply {
+    display: inline-flex !important;
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
+    height: 40px !important;
+    padding: 0 16px !important;
+    font-size: 13px !important;
+    gap: 6px !important;
+    box-shadow: none !important;
+  }
+  html:root #header .menu-toggle {
+    flex: 0 0 auto !important;
+    width: 42px !important;
+    height: 42px !important;
+    margin: 0 !important;
+  }
+
+  /* 2. Menu panel drops right under the header */
+  html:root #header .nav-links {
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-height: calc(100vh - 90px) !important;
+    max-height: calc(100dvh - 90px) !important;
+    padding: 10px 20px 16px !important;
+    border-radius: 0 0 14px 14px !important;
+  }
+
+  /* 3. Flat list: Home → Contact Us, no Academics button, no inner dropdown */
+  html:root #header .nav-links .nav-dropdown {
+    display: contents !important;
+  }
+  html:root #header .nav-links .nav-dropdown > .nav-parent,
+  html:root #header .nav-links .nav-dropdown > .dropdown-toggle {
+    display: none !important;
+  }
+  html:root #header .nav-links .nav-dropdown .nav-submenu {
+    display: contents !important;
+  }
+  html:root #header .nav-links .nav-submenu::before { content: none !important; display: none !important; }
+  html:root #header .nav-links > a,
+  html:root #header .nav-links .nav-submenu > a {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 44px !important;
+    margin: 0 !important;
+    padding: 11px 4px !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #2B2118 !important;
+    white-space: normal !important;
+  }
+  html:root #header .nav-links > a:hover,
+  html:root #header .nav-links .nav-submenu > a:hover,
+  html:root #header .nav-links > a.active,
+  html:root #header .nav-links .nav-submenu > a.active { color: #ED8B24 !important; }
+  html:root #header .nav-links > a.active::after,
+  html:root #header .nav-links .nav-submenu > a.active::after {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    left: 4px !important;
+    bottom: 5px !important;
+    width: 34px !important;
+    height: 2px !important;
+    background: #ED8B24 !important;
+  }
+  html:root #header .nav-links > a,
+  html:root #header .nav-links .nav-submenu > a { position: relative !important; }
+}
+@media (max-width: 400px) {
+  html:root #header .nav-apply { padding: 0 13px !important; font-size: 12px !important; }
+}

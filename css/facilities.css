@@ -1,0 +1,1446 @@
+
+/* =========================================
+   SUNRISE MODEL SCHOOL & COLLEGE
+   FACILITIES PAGE - SHARED WEBSITE THEME
+========================================= */
+
+:root {
+    --navy: #2B2118;
+    --navy-dark: #1F1710;
+    --navy-light: #4A3A2A;
+
+    --orange: #ED8B24;
+    --orange-light: #FFF0DA;
+
+    --background: #FAF9F7;
+    --white: #FFFFFF;
+
+    --text: #3A2E22;
+    --muted: #6B5D4F;
+    --border: #E7E4DF;
+
+    --shadow: 0 5px 20px rgba(43,33,24, 0.07);
+
+    --font: 'Plus Jakarta Sans', 'Noto Sans Bengali', sans-serif;
+}
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    background: var(--background);
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================
+   COMPACT HERO
+========================================= */
+
+.facilities-hero {
+    width: 100%;
+    padding: 34px 5% 32px;
+
+    background:
+        linear-gradient(
+            115deg,
+            rgba(43, 33, 24, .90) 0%,
+            rgba(43, 33, 24, .50) 100%
+        ),
+        url("../Images/Hero/facilities hero.jpg") center / cover no-repeat;
+
+    color: var(--white);
+}
+
+.hero-inner {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.hero-label {
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 7px 14px;
+
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 30px;
+
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.hero-label i {
+    color: #FFC47B;
+}
+
+.hero-inner h1 {
+    max-width: 850px;
+
+    margin-top: 12px;
+
+    color: #FFFFFF;
+    font-size: clamp(30px, 4vw, 43px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+}
+
+.hero-inner h1 span {
+    color: #F2A03D;
+}
+
+.hero-inner > p {
+    max-width: 760px;
+
+    margin-top: 10px;
+
+    color: #E5EBF1;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.hero-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 17px;
+}
+
+.hero-highlights div {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 8px 14px;
+
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.hero-highlights i {
+    color: #F2A03D;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.facilities-container {
+    width: 92%;
+    max-width: 1400px;
+
+    margin: auto;
+    padding: 27px 0 45px;
+}
+
+
+/* =========================================
+   COMMON WHITE CARDS
+========================================= */
+
+.facility-section {
+    min-width: 0;
+
+    padding: 20px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: 15px;
+
+    box-shadow: var(--shadow);
+}
+
+
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+.section-icon {
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--orange-light);
+    border-radius: 12px;
+
+    color: var(--orange);
+    font-size: 21px;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.section-heading p {
+    margin-top: 2px;
+
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   ACADEMIC FACILITIES
+========================================= */
+
+.academic-section {
+    margin-bottom: 18px;
+}
+
+.academic-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.academic-card {
+    min-width: 0;
+
+    overflow: hidden;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.academic-card > img {
+    width: 100%;
+    height: 145px;
+
+    object-fit: cover;
+}
+
+.academic-info {
+    position: relative;
+
+    padding: 36px 12px 16px;
+
+    min-height: 158px;
+
+    text-align: center;
+
+    background: #FFFFFF;
+}
+
+.academic-icon {
+    position: absolute;
+    top: -23px;
+    left: 50%;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateX(-50%);
+
+    background: var(--navy);
+    color: white;
+
+    border: 4px solid white;
+    border-radius: 50%;
+
+    font-size: 17px;
+}
+
+.academic-info h3 {
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.academic-info p {
+    margin-top: 7px;
+
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   TWO COLUMN LAYOUT
+========================================= */
+
+.facility-grid-two {
+    display: grid;
+    grid-template-columns: 1.08fr 1fr;
+
+    gap: 18px;
+    margin-bottom: 18px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================
+   SPORTS
+========================================= */
+
+.sports-content {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 15px;
+
+    align-items: center;
+}
+
+.sports-image {
+    height: 190px;
+    overflow: hidden;
+    border-radius: 11px;
+}
+
+.sports-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sports-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.sports-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.sports-item > i {
+    flex-shrink: 0;
+    margin-top: 3px;
+
+    color: var(--orange);
+    font-size: 17px;
+}
+
+.sports-item h3 {
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.sports-item p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+
+/* =========================================
+   SUPPORT / HEALTH / SAFETY CARDS
+========================================= */
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 9px;
+}
+
+.support-card {
+    min-width: 0;
+    min-height: 145px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 12px 6px;
+
+    background: #FBF6EC;
+
+    border: 1px solid #E9EDF0;
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.support-card > i {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--navy);
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+}
+
+.support-card h3 {
+    max-width: 115px;
+
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   OTHER CAMPUS FACILITIES
+========================================= */
+
+.facility-grid-bottom {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+
+    gap: 18px;
+    align-items: stretch;
+}
+
+.other-facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.other-card {
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    background: white;
+}
+
+.other-card img {
+    width: 100%;
+    height: 115px;
+
+    object-fit: cover;
+}
+
+.other-card h3 {
+    min-height: 57px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px 5px;
+
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.45;
+}
+
+
+/* =========================================
+   CAMPUS GALLERY
+========================================= */
+
+.campus-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.gallery-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.gallery-text .section-heading {
+    margin-bottom: 12px;
+}
+
+.gallery-description {
+    max-width: 360px;
+
+    margin: 12px 0 18px;
+
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.primary-button {
+    min-height: 42px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 10px 18px;
+
+    background: var(--orange);
+    color: white;
+
+    border: 1px solid var(--orange);
+    border-radius: 9px;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.gallery-preview {
+    position: relative;
+
+    width: 180px;
+    height: 180px;
+
+    flex-shrink: 0;
+}
+
+.gallery-photo {
+    position: absolute;
+
+    width: 112px;
+    height: 139px;
+
+    padding: 5px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+    border-radius: 7px;
+
+    object-fit: cover;
+}
+
+.gallery-photo-one {
+    top: 10px;
+    left: 4px;
+    transform: rotate(-7deg);
+}
+
+.gallery-photo-two {
+    top: 27px;
+    right: 3px;
+    transform: rotate(7deg);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .academic-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .facility-grid-two {
+        grid-template-columns: 1fr;
+    }
+
+    .facility-grid-bottom {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 760px) {
+
+    .facilities-container {
+        width: 94%;
+    }
+
+    .facilities-hero {
+        padding: 28px 4%;
+    }
+
+    .hero-inner h1 {
+        font-size: 34px;
+    }
+
+    .academic-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .academic-card > img {
+        height: 130px;
+    }
+
+    .sports-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .facility-section {
+        padding: 16px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 13px;
+    }
+
+    .facilities-hero {
+        padding: 25px 5%;
+    }
+
+    .hero-inner h1 {
+        font-size: 29px;
+        letter-spacing: -.6px;
+    }
+
+    .hero-inner > p {
+        font-size: 13px;
+    }
+
+    .hero-highlights {
+        gap: 8px;
+    }
+
+    .hero-highlights div {
+        font-size: 13px;
+        padding: 7px 10px;
+    }
+
+    .facilities-container {
+        width: 93%;
+        padding: 17px 0 30px;
+    }
+
+    .facility-section {
+        padding: 13px;
+        border-radius: 12px;
+    }
+
+    .section-heading {
+        gap: 9px;
+        margin-bottom: 14px;
+    }
+
+    .section-icon {
+        width: 37px;
+        height: 37px;
+        font-size: 18px;
+    }
+
+    .section-heading h2 {
+        font-size: 16px;
+    }
+
+    .section-heading p {
+        font-size: 13px;
+    }
+
+    .academic-grid {
+        gap: 9px;
+    }
+
+    .academic-card > img {
+        height: 105px;
+    }
+
+    .academic-info {
+        min-height: 150px;
+        padding: 34px 7px 12px;
+    }
+
+    .academic-info h3 {
+        font-size: 13px;
+    }
+
+    .sports-content {
+        grid-template-columns: 1fr;
+    }
+
+    .sports-image {
+        height: 185px;
+    }
+
+    .sports-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .support-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .support-card {
+        min-height: 130px;
+        padding: 9px 4px;
+    }
+
+    .support-card > i {
+        width: 43px;
+        height: 43px;
+        font-size: 19px;
+    }
+
+    .support-card h3 {
+        font-size: 13px;
+    }
+
+    .other-facilities-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .other-card img {
+        height: 110px;
+    }
+
+    .campus-gallery {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .gallery-preview {
+        width: 100%;
+        height: 160px;
+    }
+
+    .gallery-photo-one {
+        left: 20%;
+    }
+
+    .gallery-photo-two {
+        right: 20%;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 350px) {
+
+    .academic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .academic-card > img {
+        height: 160px;
+    }
+
+    .sports-list {
+        grid-template-columns: 1fr;
+    }
+
+    .support-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .other-facilities-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #FFFFFF;
+        }
+
+        /* =================================
+           PREMIUM SCHOOL NAVIGATION
+        ================================= */
+
+        .header {
+            width: 100%;
+            background: #FFFFFF;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #EAE7E2;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1450px;
+            margin: auto;
+        }
+
+        .navbar {
+            min-height: 86px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        /* =================================
+           BRAND / LOGO
+        ================================= */
+
+        /* BRAND / LOGO */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+}
+
+.brand-subtitle-img {
+    width: 175px;
+    height: 58px;
+    object-fit: contain;
+    object-position: left center;
+    display: block;
+}
+
+/* TABLET */
+
+@media(max-width: 1050px) {
+    .logo-img {
+        width: 53px;
+        height: 53px;
+    }
+
+    .brand-subtitle-img {
+        width: 150px;
+        height: 52px;
+    }
+}
+
+/* MOBILE */
+
+@media(max-width: 800px) {
+    .logo-img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .brand-subtitle-img {
+        width: 140px;
+        height: 48px;
+    }
+}
+        /* =================================
+           NAVIGATION LINKS
+        ================================= */
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: clamp(16px, 2vw, 29px);
+        }
+
+        .nav-links a {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #3A2E22;
+            text-decoration: none;
+            white-space: nowrap;
+            position: relative;
+            padding: 10px 0;
+            transition: color .25s ease;
+        }
+
+        /* ACTIVE LINK */
+
+        .nav-links a.active {
+            color: #B8620A;
+        }
+
+        .nav-links a.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 2px;
+            width: 100%;
+            height: 2px;
+            background: #B8620A;
+        }
+
+        /* HOVER */
+
+        .nav-links a:hover {
+            color: #B8620A;
+        }
+
+        /* =================================
+           ROUNDED ORANGE APPLY BUTTON
+        ================================= */
+
+        .nav-apply {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 13px 25px;
+            background: #ED8B24;
+            color: #FFFFFF;
+            border-radius: 50px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 800;
+            white-space: nowrap;
+            text-decoration: none;
+            transition: background .25s ease,
+                        transform .25s ease;
+        }
+
+        .nav-apply span {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        .nav-apply:hover {
+            background: #ED8B24;
+            transform: translateY(-2px);
+        }
+
+        /* =================================
+           MOBILE MENU BUTTON
+        ================================= */
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 26px;
+            color: #2B2118;
+            cursor: pointer;
+        }
+
+        /* =================================
+           TABLET RESPONSIVE
+        ================================= */
+
+        @media(max-width: 1050px) {
+
+            .navbar {
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 13px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .logo-img {
+                width: 53px;
+                height: 53px;
+            }
+
+            .brand-name {
+                font-size: 15px;
+            }
+
+            .brand-subtitle {
+                font-size: 8px;
+            }
+
+            .nav-apply {
+                padding: 12px 19px;
+                font-size: 11px;
+            }
+        }
+
+        /* =================================
+           MOBILE RESPONSIVE
+        ================================= */
+
+        @media(max-width: 800px) {
+
+            .navbar {
+                min-height: 75px;
+            }
+
+            .logo-img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .brand-name {
+                font-size: 15px;
+            }
+
+            .brand-subtitle {
+                font-size: 8px;
+                letter-spacing: 1.5px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-apply {
+                display: none;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                background: #FFFFFF;
+                padding: 22px 5% 28px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 13px;
+                border-top: 1px solid #EAE7E2;
+                border-bottom: 1px solid #EAE7E2;
+                box-shadow: 0 10px 20px rgba(0,0,0,.04);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+                width: 100%;
+            }
+
+            .nav-links a.active::after {
+                width: 30px;
+            }
+        }
+
+        @media(max-width: 380px) {
+
+            .brand {
+                gap: 8px;
+            }
+
+            .logo-img {
+                width: 43px;
+                height: 43px;
+            }
+
+            .brand-name {
+                font-size: 13px;
+            }
+
+            .brand-subtitle {
+                font-size: 7px;
+                letter-spacing: 1px;
+            }
+        }
+
+    
+
+        
+/* =====================================
+   SMC FOOTER
+===================================== */
+
+.site-footer {
+    width: 100%;
+    background: #FAF9F7;
+    color: #2B2118;
+    padding: 42px 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    border-top: 1px solid #EAE7E2;
+    box-sizing: border-box;
+}
+
+.footer-container {
+    width: 88%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.5fr 0.85fr 1fr 0.9fr 1.45fr;
+    gap: 35px;
+    align-items: start;
+}
+
+/* BRAND */
+
+
+/* BRAND — LOGO & SUBTITLE SIDE BY SIDE */
+
+
+/* LOGO + SUBTITLE — ZERO GAP */
+
+.footer-brand {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 0;
+    row-gap: 18px;
+}
+
+.footer-logo,
+.footer-subtitle {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+.footer-logo img {
+    display: block;
+    width: 100px;
+    height: 65px;
+    object-fit: contain;
+    object-position: right center;
+}
+
+.footer-subtitle img {
+    display: block;
+    width: 140px;
+    height: 65px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+/* SOCIAL ICONS BELOW */
+
+.footer-socials {
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+/* SOCIAL ICONS BELOW BOTH IMAGES */
+
+.footer-socials {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 0;
+}
+
+@media (max-width: 700px) {
+    .footer-logo img,
+    .footer-subtitle img {
+        width: 125px;
+        height: 58px;
+    }
+
+    .footer-brand {
+        column-gap: 10px;
+    }
+}
+
+/* SOCIAL ICONS */
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 22px;
+}
+
+.footer-socials a {
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #2B2118;
+    font-size: 19px;
+    font-weight: 800;
+    text-decoration: none;
+
+    transition: color 0.25s ease,
+                transform 0.25s ease;
+}
+
+.footer-socials a:hover {
+    color: #ED8B24;
+    transform: translateY(-3px);
+}
+
+/* FOOTER COLUMNS */
+
+.footer-column {
+    min-width: 0;
+}
+
+.footer-column h3 {
+    margin: 2px 0 14px;
+
+    color: #2B2118;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-column li {
+    color: #6B5D4F;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+.footer-column li a {
+    color: #6B5D4F;
+    font-size: 14px;
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.footer-column li a:hover {
+    color: #ED8B24;
+}
+
+/* CONTACT */
+
+.footer-contact ul {
+    gap: 11px;
+}
+
+.footer-contact ul li {
+    display: grid;
+    grid-template-columns: 25px minmax(0, 1fr);
+    gap: 10px;
+    align-items: start;
+
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+
+.contact-icon {
+    color: #2B2118;
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.footer-contact li a {
+    color: #6B5D4F;
+    text-decoration: none;
+}
+
+.footer-contact li a:hover {
+    color: #ED8B24;
+}
+
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 1050px) {
+
+    .footer-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 35px 28px;
+    }
+
+    .footer-brand {
+        grid-row: span 2;
+    }
+
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 700px) {
+
+    .site-footer {
+        padding: 35px 0;
+    }
+
+    .footer-container {
+        width: 90%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 20px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+
+    .footer-logo img {
+        width: 205px;
+    }
+
+    .footer-subtitle img {
+        width: 205px;
+    }
+
+    .footer-column h3 {
+        font-size: 15px;
+    }
+
+    .footer-column li,
+    .footer-column li a {
+        font-size: 13px;
+    }
+
+    .footer-contact {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+    .footer-container {
+        width: 92%;
+        gap: 26px 14px;
+    }
+
+    .footer-socials {
+        gap: 16px;
+    }
+
+}
+
+        
+        
+
+/* Responsive safety layer — preserves the original visual design */
+img, video, iframe { max-width: 100%; }
+html { scroll-behavior: smooth; }
+body { min-width: 320px; overflow-x: hidden; }
+*, *::before, *::after { box-sizing: border-box; }
+@media (max-width: 1024px) {
+  .container, .calendar-container, .admission-container, .exam-container,
+  .facilities-container, .notice-container, .tuition-container,
+  .about-container, main { max-width: 100%; }
+}
+@media (max-width: 768px) {
+  img { height: auto; }
+  table { display: table; width: 100%; max-width: 100%; min-width: 0; }
+  .nav-links { max-width: 100%; }
+}
+@media (max-width: 480px) {
+  body { overflow-wrap: break-word; }
+  button, .btn, a.button { max-width: 100%; }
+}
+
+/* ===== Shared navigation improvements ===== */
+.header{z-index:2000!important}.navbar{position:relative}.nav-links{position:relative;z-index:2002}.nav-links>a,.nav-dropdown>.nav-parent{position:relative}.nav-links a.active,.nav-dropdown.is-active>.nav-parent{color:#B8620A!important}.nav-links a.active::after,.nav-dropdown.is-active>.nav-parent::after{content:"";position:absolute;left:0;bottom:2px;width:100%;height:2px;background:#B8620A}.nav-dropdown{position:relative;display:flex;align-items:center;gap:3px}.dropdown-caret{font-size:13px;margin-left:3px}.dropdown-toggle{display:none;border:0;background:transparent;color:#3A2E22;font-size:18px;cursor:pointer;padding:8px}.nav-submenu{position:absolute;top:calc(100% + 12px);left:-16px;min-width:220px;padding:9px;background:#fff;border:1px solid #EFE5D5;border-radius:12px;box-shadow:0 18px 40px rgba(43,33,24,.16);display:none;flex-direction:column;gap:2px;z-index:3000}.nav-submenu a{display:block!important;width:100%;padding:11px 13px!important;border-radius:8px;color:#3A2E22!important;font-size:13px!important;text-decoration:none;white-space:nowrap}.nav-submenu a::after{display:none!important}.nav-submenu a:hover,.nav-submenu a.active{background:#FBF6EC;color:#B8620A!important}.nav-dropdown:hover .nav-submenu,.nav-dropdown:focus-within .nav-submenu,.nav-dropdown.submenu-open .nav-submenu{display:flex}.nav-submenu a.active::after{display:none!important}
+@media(max-width:1100px){.navbar{gap:12px!important}.nav-links{gap:clamp(8px,1.1vw,14px)!important}.nav-links>a,.nav-dropdown>.nav-parent{font-size:clamp(11px,1.1vw,14px)!important}.nav-apply{padding:10px 14px!important}}
+@media(max-width:900px){.navbar{min-height:74px!important}.menu-toggle{display:flex!important;align-items:center;justify-content:center;width:44px;height:44px;flex:0 0 44px;border:1px solid rgba(43,33,24,.16)!important;border-radius:10px;background:#fff!important;z-index:2005;font-size:25px!important;line-height:1}.nav-apply{display:none!important}.nav-links{display:none!important;position:absolute!important;top:100%!important;left:0!important;right:0!important;width:100%!important;max-height:calc(100vh - 90px);overflow-y:auto;background:#fff!important;padding:15px 5% 20px!important;box-shadow:0 16px 30px rgba(43,33,24,.15);border:1px solid #EFE5D5;border-radius:0 0 14px 14px;align-items:stretch!important;flex-direction:column!important;gap:3px!important}.nav-links.open{display:flex!important}.nav-links>a,.nav-dropdown>.nav-parent{display:block;width:100%;font-size:15px!important;padding:12px 5px!important}.nav-dropdown{width:100%;display:grid;grid-template-columns:1fr 40px;align-items:center}.nav-dropdown>.nav-parent{grid-column:1;grid-row:1}.dropdown-toggle{display:block;grid-column:2;grid-row:1;width:40px;height:40px}.nav-submenu{position:static;grid-column:1/-1;min-width:0;width:100%;box-shadow:none;border:0;border-left:2px solid #EFE5D5;border-radius:0;margin:0 0 5px 8px;padding:3px 0 3px 9px;display:none}.nav-dropdown.submenu-open .nav-submenu{display:flex}.nav-dropdown:hover .nav-submenu{display:none}.nav-dropdown.submenu-open:hover .nav-submenu{display:flex}.nav-links a.active::after,.nav-dropdown.is-active>.nav-parent::after{width:32px;bottom:5px}.nav-submenu a{font-size:14px!important;padding:10px 12px!important}}
+@media(prefers-reduced-motion:reduce){.nav-links,.nav-submenu{scroll-behavior:auto!important;transition:none!important}}
+
+@media(min-width:901px){.nav-submenu a.active{border-bottom:2px solid #B8620A!important;border-radius:0!important}}

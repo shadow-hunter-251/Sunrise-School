@@ -1,0 +1,27 @@
+(function(){
+ const init=()=>{const nav=document.getElementById('navLinks'),toggle=document.getElementById('menuToggle'),drop=document.getElementById('academicDropdown'),dropBtn=drop?.querySelector('.dropdown-toggle');if(!nav||!toggle)return;
+ const close=()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰';drop?.classList.remove('submenu-open');dropBtn?.setAttribute('aria-expanded','false')};
+ toggle.addEventListener('click',e=>{e.preventDefault();e.stopImmediatePropagation();const open=!nav.classList.contains('open');nav.classList.toggle('open',open);toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'✕':'☰'},true);
+ dropBtn?.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();const open=!drop.classList.contains('submenu-open');drop.classList.toggle('submenu-open',open);dropBtn.setAttribute('aria-expanded',String(open))});
+ const current=decodeURIComponent(location.pathname.split('/').pop()||'Home.html').toLowerCase();let activeTop=false;nav.querySelectorAll('a[data-page]').forEach(a=>{const page=(a.dataset.page||'').toLowerCase();if(page===current){a.classList.add('active');a.setAttribute('aria-current','page');if(a.closest('.nav-submenu'))drop?.classList.add('is-active');else activeTop=true;}});
+ if(current==='academic-calendar.html') {const parents=nav.querySelector('.nav-parent');parents?.classList.add('active');drop?.classList.add('is-active')}
+ document.addEventListener('click',e=>{if(nav.classList.contains('open')&&!nav.contains(e.target)&&e.target!==toggle)close();const link=e.target.closest('#navLinks a');if(link){close()}});document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+ };if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();})();
+
+
+/* FAQ popup card (footer > Resources > FAQs) */
+(function(){
+ const html='<div class="faq-modal" id="faqModal" role="dialog" aria-modal="true" aria-labelledby="faqModalTitle" hidden><div class="faq-modal-card"><button type="button" class="faq-modal-close" aria-label="Close FAQs">&times;</button><span class="faq-modal-eyebrow">HELP CENTER</span><h2 id="faqModalTitle">Frequently Asked Questions</h2><p class="faq-modal-sub">Quick answers for parents and students of Sunrise Model School &amp; College.</p><div class="faq-modal-list"><details class="faq-modal-item"><summary>When does the new academic session begin?</summary><p>The new session begins in January. Admission for the next session opens in November, so early applications are encouraged.</p></details><details class="faq-modal-item"><summary>How can I apply for admission?</summary><p>Click Apply Now to reach our Contact page, send us your details, or visit the school office with the student’s birth certificate and recent photographs.</p></details><details class="faq-modal-item"><summary>What documents are needed for admission?</summary><p>A copy of the birth certificate, two passport-size photographs, the previous school’s transfer certificate and mark sheet, and the parents’ NID copies.</p></details><details class="faq-modal-item"><summary>What are the school hours?</summary><p>Classes run Sunday to Thursday. The school office is open from 8:00 AM to 4:00 PM.</p></details><details class="faq-modal-item"><summary>How is the tuition fee paid?</summary><p>Fees can be paid monthly at the school accounts office or through bKash and Nagad. Please keep the payment receipt for your records.</p></details><details class="faq-modal-item"><summary>Is there a scholarship or fee waiver?</summary><p>Yes. Meritorious students and siblings may receive a partial fee waiver. Please contact the office for eligibility details.</p></details><details class="faq-modal-item"><summary>How can parents meet the teachers?</summary><p>Parent-teacher meetings are held after each term exam. You can also request an appointment through the school office.</p></details><details class="faq-modal-item"><summary>Where can I see exam routines and notices?</summary><p>The Exam and Notice &amp; Events pages list all routines, results and announcements. Class routines are on the Classes &amp; Routine page.</p></details></div><a class="faq-modal-contact" href="contact.html">Still have a question? Contact us</a></div></div>';
+ const init=()=>{
+  document.body.insertAdjacentHTML('beforeend',html);
+  const modal=document.getElementById('faqModal'),closeBtn=modal.querySelector('.faq-modal-close');let last=null;
+  const open=()=>{last=document.activeElement;modal.hidden=false;document.body.classList.add('faq-open');modal.querySelector('.faq-modal-list').scrollTop=0;closeBtn.focus()};
+  const close=()=>{modal.hidden=true;document.body.classList.remove('faq-open');modal.querySelectorAll('details').forEach(d=>d.open=false);last&&last.focus&&last.focus()};
+  document.addEventListener('click',e=>{const a=e.target.closest('[data-open-faq]');if(a){e.preventDefault();e.stopPropagation();open()}},true);
+  closeBtn.addEventListener('click',close);
+  modal.addEventListener('click',e=>{if(e.target===modal)close()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.hidden)close()});
+  modal.querySelectorAll('details').forEach(d=>d.addEventListener('toggle',()=>{if(d.open)modal.querySelectorAll('details').forEach(o=>{if(o!==d)o.open=false})}));
+ };
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();

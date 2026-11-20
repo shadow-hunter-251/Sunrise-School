@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Examination | Sunrise Model School & College</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/exam.css">
+  <link rel="stylesheet" href="../css/shared-nav-fix.css">
+<link rel="stylesheet" href="../css/site-enhancements.css">
+  <link rel="stylesheet" href="../css/global-nav.css">
+  <link rel="stylesheet" href="../css/sunrise-theme.css">
+</head>
+<body>
+
+
+    <header class="header" id="header"><div class="container navbar"><a class="brand" href="Home.html" aria-label="Sunrise Model School home"><img class="logo-img logo-sun" src="../Images/logo-sun.png" alt="Sunrise Model School logo"><img class="logo-sub" src="../Images/logo-wordmark.png" alt="Sunrise Model High School"></a><nav class="nav-links" id="navLinks" aria-label="Main navigation"><a href="Home.html" data-page="Home.html">Home</a><a href="about.html" data-page="about.html">About</a><div class="nav-dropdown" id="academicDropdown"><a class="nav-parent" href="academic-calendar.html" data-page="academic-calendar.html">Academics</a><button class="dropdown-toggle" type="button" aria-label="Show academic links" aria-expanded="false" aria-controls="academicSubmenu">⌄</button><div class="nav-submenu" id="academicSubmenu"><a href="Classes%20%26%20Routine.html" data-page="Classes & Routine.html">Classes &amp; Routine</a><a href="academic-calendar.html" data-page="academic-calendar.html">Academic Routine</a><a href="tuition.html" data-page="tuition.html">Tuition</a><a href="exam.html" data-page="exam.html">Exam</a><a href="faculty.html" data-page="faculty.html">Faculty</a></div></div><a href="admission.html" data-page="admission.html">Admission</a><a href="notice.html" data-page="notice.html">Notice &amp; Events</a><a href="facilities.html" data-page="facilities.html">Facilities</a><a href="contact.html" data-page="contact.html">Contact Us</a></nav><a class="nav-apply" href="contact.html">Apply Now <span>↗</span></a><button aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle" id="menuToggle" type="button">☰</button></div></header>
+
+    <!-- HERO -->
+    <section class="exam-hero">
+        <div class="exam-hero-overlay"></div>
+
+        <div class="exam-hero-content">
+            <div class="exam-label">
+                <i class="fa-solid fa-graduation-cap"></i>
+                Academics
+            </div>
+
+            <h1>Examination</h1>
+
+            <p>
+                Examination schedule, evaluation system
+                and grading policy.
+            </p>
+
+            <div class="hero-underline"></div>
+        </div>
+    </section>
+
+    <main class="exam-container">
+
+        <!-- SUMMARY CARDS -->
+        <section class="exam-summary">
+
+            <div class="exam-summary-card">
+                <div class="summary-icon">
+                    <i class="fa-regular fa-calendar-days"></i>
+                </div>
+                <div>
+                    <h3>Examination System</h3>
+                    <p>3 Major Exams Per Year</p>
+                </div>
+            </div>
+
+            <div class="exam-summary-card">
+                <div class="summary-icon">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <div>
+                    <h3>Total Exams</h3>
+                    <p class="summary-number">3</p>
+                </div>
+            </div>
+
+            <div class="exam-summary-card">
+                <div class="summary-icon">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+                <div>
+                    <h3>Our Grading Scale</h3>
+                    <p>A+ to F</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- SCHEDULE + EXAM TYPES -->
+        <section class="exam-main-grid">
+
+            <!-- UPCOMING EXAM SCHEDULE -->
+            <div class="exam-schedule-panel">
+
+                <div class="schedule-heading">
+                    <div class="section-title">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <h2>Upcoming Exam Schedule</h2>
+                    </div>
+                </div>
+
+                <!-- SEARCH CONTROLS -->
+                <div class="schedule-search">
+
+                    <div class="search-field">
+                        <label for="examSelect">Examination</label>
+                        <select id="examSelect">
+                            <option value="first">First Term Examination - 2026</option>
+                            <option value="second">Second Term Examination - 2026</option>
+                            <option value="annual">Annual Examination - 2026</option>
+                        </select>
+                    </div>
+
+                    <div class="search-field">
+                        <label for="classSelect">Select Class</label>
+                        <select id="classSelect">
+                            <option value="6-8">Class 6 – 8</option>
+                            <option value="9-10">Class 9 – 10</option>
+                            <option value="11-12">Class 11 – 12</option>
+                        </select>
+                    </div>
+
+                    <button type="button" id="searchSchedule"
+                            class="schedule-search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Search Schedule
+                    </button>
+
+                </div>
+
+                <!-- TABLE RESULT -->
+                <div class="schedule-result" id="scheduleResult">
+
+                    <div class="schedule-class-heading" id="scheduleClassHeading">
+                        Class: 6 – 8
+                    </div>
+
+                    <div class="schedule-table-wrapper">
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Subject</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="scheduleBody"></tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- NO RESULT -->
+                <div class="no-schedule" id="noSchedule">
+                    <i class="fa-regular fa-calendar-xmark"></i>
+                    <h3>No Schedule Found</h3>
+                    <p>No examination schedule is currently available for your selected options.</p>
+                </div>
+
+                <!-- SCHEDULE FOOTER + DOWNLOAD BUTTON -->
+                <div class="schedule-footer">
+
+                    <div class="schedule-footer-message">
+                        <i class="fa-solid fa-book-open book-decoration"></i>
+                        <span class="footer-decoration-line"></span>
+                        <p>Prepare well, Perform better!</p>
+                        <span class="footer-decoration-line"></span>
+                    </div>
+
+                    <button type="button" id="downloadRoutine"
+                            class="download-routine">
+                        <i class="fa-solid fa-download"></i>
+                        Download Exam Routine PDF
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- EXAMINATION TYPES -->
+            <aside class="exam-types-panel">
+
+                <div class="section-title">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <h2>Examination Types</h2>
+                </div>
+
+                <div class="exam-type-card">
+                    <div class="type-icon">
+                        <i class="fa-solid fa-pencil"></i>
+                    </div>
+                    <div class="type-info">
+                        <h3>First Term Examination</h3>
+                        <p>Usually held in April.</p>
+                    </div>
+                </div>
+
+                <div class="exam-type-card">
+                    <div class="type-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <div class="type-info">
+                        <h3>Second Term Examination</h3>
+                        <p>Usually held in August.</p>
+                    </div>
+                </div>
+
+                <div class="exam-type-card">
+                    <div class="type-icon">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <div class="type-info">
+                        <h3>Annual Examination</h3>
+                        <p>Usually held in November – December.</p>
+                    </div>
+                </div>
+
+            </aside>
+
+        </section>
+
+        <!-- GRADING + INSTRUCTIONS -->
+        <section class="exam-bottom-grid">
+
+            <!-- GRADING POLICY -->
+            <div class="grading-panel">
+
+                <div class="section-title">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <h2>Grading Policy</h2>
+                </div>
+
+                <div class="grading-table-wrapper">
+                    <table class="grading-table">
+                        <thead>
+                            <tr>
+                                <th>Marks</th>
+                                <th>Grade</th>
+                                <th>GPA</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr><td>80 – 100</td><td>A+</td><td>5.00</td></tr>
+                            <tr><td>70 – 79</td><td>A</td><td>4.00</td></tr>
+                            <tr><td>60 – 69</td><td>A-</td><td>3.50</td></tr>
+                            <tr><td>50 – 59</td><td>B</td><td>3.00</td></tr>
+                            <tr><td>40 – 49</td><td>C</td><td>2.00</td></tr>
+                            <tr><td>33 – 39</td><td>D</td><td>1.00</td></tr>
+                            <tr><td>00 – 32</td><td>F</td><td>0.00</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="grading-decoration">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+            </div>
+
+            <!-- EXAM INSTRUCTIONS -->
+            <div class="instructions-panel">
+
+                <div class="section-title">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    <h2>Examination Instructions</h2>
+                </div>
+
+                <div class="instructions-list">
+
+                    <div class="instruction-item">
+                        <span>1</span>
+                        <p>পরীক্ষার কমপক্ষে ১৫ মিনিট আগে পরীক্ষার হলে উপস্থিত হতে হবে।</p>
+                    </div>
+
+                    <div class="instruction-item">
+                        <span>2</span>
+                        <p>প্রবেশপত্র সঙ্গে আনতে হবে।</p>
+                    </div>
+
+                    <div class="instruction-item">
+                        <span>3</span>
+                        <p>মোবাইল ফোন বা অনুমোদনহীন ইলেকট্রনিক ডিভাইস আনা নিষিদ্ধ।</p>
+                    </div>
+
+                    <div class="instruction-item">
+                        <span>4</span>
+                        <p>পরীক্ষার হলে শৃঙ্খলা বজায় রাখতে হবে।</p>
+                    </div>
+
+                    <div class="instruction-item">
+                        <span>5</span>
+                        <p>নির্ধারিত সময়ের আগে উত্তরপত্র জমা দেওয়া যাবে না।</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <a href="Home.html" class="footer-logo"><img src="../Images/logo-sun.png" alt="Sunrise Model School logo"></a>
+      <a href="Home.html" class="footer-subtitle"><img src="../Images/logo-wordmark.png" alt="Sunrise Model High School"></a>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/" aria-label="Instagram"><img src="../Images/instagram.png" alt="Instagram"></a><a href="https://www.facebook.com/" aria-label="Facebook"><img src="../Images/facebook.png" alt="Facebook"></a><a href="https://www.youtube.com/" aria-label="YouTube"><img src="../Images/youtube.png" alt="YouTube"></a>
+      </div>
+    </div>
+    <div class="footer-column"><h3>Quick Links</h3><ul>
+      <li><a href="Home.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-column"><h3>Our Programs</h3><ul>
+      <li><a href="programs.html">Primary School</a></li><li><a href="programs.html">Middle School</a></li><li><a href="programs.html">Senior School</a></li><li><a href="programs.html">Co-curricular</a></li>
+    </ul></div>
+    <div class="footer-column"><h3>Resources</h3><ul>
+      <li><a href="academic-calendar.html">Academic Calendar</a></li><li><a href="tuition.html">Fees &amp; Policies</a></li><li><a href="#faqs" data-open-faq>FAQs</a></li>
+    </ul></div>
+    <div class="footer-column footer-contact"><h3>Contact Us</h3><ul>
+      <li><span class="contact-icon">📍</span><span>Your School Address, Bangladesh</span></li>
+      <li><span class="contact-icon">☎</span><a href="tel:+8801XXXXXXXXX">+880 1XXX-XXXXXX</a></li>
+      <li><span class="contact-icon">✉</span><a href="mailto:info@your-school.edu.bd">info@your-school.edu.bd</a></li>
+      <li><span class="contact-icon">◷</span><span>Sunday – Thursday: 8 AM – 4 PM</span></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom"><p>© Sunrise Model School &amp; College. All rights reserved.</p></div>
+</footer>
+
+
+    <script src="../js/exam.js" defer></script>
+<script src="../js/site-nav.js" defer></script>
+</body>
+</html>

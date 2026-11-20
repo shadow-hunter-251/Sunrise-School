@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classes &amp; Routine | Sunrise Model School &amp; College</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="../css/classes-and-routine.css"><link rel="stylesheet" href="../css/shared-nav-fix.css"><link rel="stylesheet" href="../css/site-enhancements.css">
+  <link rel="stylesheet" href="../css/global-nav.css">
+  <link rel="stylesheet" href="../css/sunrise-theme.css">
+</head><body>
+<header class="header" id="header"><div class="container navbar"><a class="brand" href="Home.html" aria-label="Sunrise Model School home"><img class="logo-img logo-sun" src="../Images/logo-sun.png" alt="Sunrise Model School logo"><img class="logo-sub" src="../Images/logo-wordmark.png" alt="Sunrise Model High School"></a><nav class="nav-links" id="navLinks" aria-label="Main navigation"><a href="Home.html" data-page="Home.html">Home</a><a href="about.html" data-page="about.html">About</a><div class="nav-dropdown" id="academicDropdown"><a class="nav-parent" href="academic-calendar.html" data-page="academic-calendar.html">Academics</a><button class="dropdown-toggle" type="button" aria-label="Show academic links" aria-expanded="false" aria-controls="academicSubmenu">⌄</button><div class="nav-submenu" id="academicSubmenu"><a href="Classes%20%26%20Routine.html" data-page="Classes & Routine.html">Classes &amp; Routine</a><a href="academic-calendar.html" data-page="academic-calendar.html">Academic Routine</a><a href="tuition.html" data-page="tuition.html">Tuition</a><a href="exam.html" data-page="exam.html">Exam</a><a href="faculty.html" data-page="faculty.html">Faculty</a></div></div><a href="admission.html" data-page="admission.html">Admission</a><a href="notice.html" data-page="notice.html">Notice &amp; Events</a><a href="facilities.html" data-page="facilities.html">Facilities</a><a href="contact.html" data-page="contact.html">Contact Us</a></nav><a class="nav-apply" href="contact.html">Apply Now <span>↗</span></a><button aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle" id="menuToggle" type="button">☰</button></div></header>
+
+<!-- =========================================
+     SHARED NAVIGATION
+========================================= -->
+
+
+
+
+<main>
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="academic-hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+
+        <div class="hero-breadcrumb">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Academics</span>
+        </div>
+
+        <h1>Classes <span>&</span> Routine</h1>
+
+        <p>
+            Explore our class information and class routine at a glance.
+        </p>
+
+        <div class="hero-line"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     ACADEMIC INFORMATION
+========================================= -->
+
+<section class="academic-section">
+
+<div class="container">
+
+<div class="academic-layout">
+
+
+<!-- CLASS INFORMATION -->
+
+<div class="information-panel">
+
+    <div class="panel-heading">
+
+        <div class="heading-icon">
+            <i class="fa-solid fa-users"></i>
+        </div>
+
+        <div>
+            <h2>Our Class Information</h2>
+            <p>
+                Here's an overview of our classes, sections,
+                shifts and student strength.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="class-table-wrapper">
+
+        <table class="class-table">
+
+            <thead>
+                <tr>
+                    <th><i class="fa-solid fa-graduation-cap"></i> Class</th>
+                    <th><i class="fa-solid fa-user-group"></i> Sections</th>
+                    <th><i class="fa-solid fa-sun"></i> Shift</th>
+                    <th><i class="fa-solid fa-users"></i> Students</th>
+                </tr>
+            </thead>
+
+            <tbody id="class-table-body"></tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="3">Total Students</td>
+                    <td id="total-students">863</td>
+                </tr>
+            </tfoot>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     INTERACTIVE CURRICULUM
+========================================= -->
+
+<aside class="curriculum-panel" id="curriculumPanel">
+
+    <!-- HEADER -->
+
+    <div class="curriculum-heading">
+
+        <div class="curriculum-icon">
+            <i class="fa-solid fa-book-open"></i>
+        </div>
+
+        <div>
+            <h2>Curriculum & Books</h2>
+            <p>Explore class-wise textbooks.</p>
+        </div>
+
+    </div>
+
+
+    <!-- CLASS LIST -->
+
+    <div class="curriculum-home" id="curriculumHome">
+
+        <div class="library-intro">
+            <span class="library-label">ACADEMIC LIBRARY</span>
+            <h3>Choose Your Class</h3>
+            <p>Select a class to view its textbooks.</p>
+        </div>
+
+
+        <div class="class-grid" id="classGrid">
+
+            <button type="button" class="class-card" data-class="Nursery">
+                <span class="class-card-icon">
+                    <i class="fa-solid fa-child-reaching"></i>
+                </span>
+                <span class="class-card-name">Nursery</span>
+                <i class="fa-solid fa-chevron-right class-arrow"></i>
+            </button>
+
+            <button type="button" class="class-card" data-class="Class 1">
+                <span class="class-card-icon"><i class="fa-solid fa-book"></i></span>
+                <span class="class-card-name">Class 1</span>
+                <i class="fa-solid fa-chevron-right class-arrow"></i>
+            </button>
+
+            <button type="button" class="class-card" data-class="Class 2">
+                <span class="class-card-icon"><i class="fa-solid fa-book"></i></span>
+                <span class="class-card-name">Class 2</span>
+                <i class="fa-solid fa-chevron-right class-arrow"></i>
+            </button>
+
+            <button type="button" class="class-card" data-class="Class 3">
+                <span class="class-card-icon"><i class="fa-solid fa-book"></i></span>
+                <span class="class-card-name">Class 3</span>
+                <i class="fa-solid fa-chevron-right class-arrow"></i>
+            </button>
+
+            <button type="button" class="class-card" data-class="Class 4">
+                <span class="class-card-icon"><i class="fa-solid fa-book"></i></span>
+                <span class="class-card-name">Class 4</span>
+                <i class="fa-solid fa-chevron-right class-arrow"></i>
+            </button>
+
+            <button type="button" class="class-card" data-class="Class 5">
+                <span class="class-card-icon"><i class="fa-solid fa-book"></i></span>
+                <span class="class-card-name">Class 5</span>
+                <i class="fa-solid fa-chevron-right class-arrow"></i>
+            </button>
+
+            <button type="button" class="class-card" data-class="Class 6">
+                <span class="class-card-icon"><i class="fa-solid fa-book-open"></i></span>
+                <span class="class-card-name">Class 6</span>
+                <i class="fa-solid fa-chevron-right class-arrow"></i>
+            </button>
+
+            <button type="button" class="class-card" data-class="Class 7">
+                <span class="class-card-icon"><i class="fa-solid fa-book-open"></i></span>
+                <span class="class-card-name">Class 7</span>
+                <i class="fa-solid fa-chevron-right class-arrow"></i>
+            </button>
+
+            <button type="button" class="class-card" data-class="Class 8">
+                <span class="class-card-icon"><i class="fa-solid fa-book-open"></i></span>
+                <span class="class-card-name">Class 8</span>
+                <i class="fa-solid fa-chevron-right class-arrow"></i>
+            </button>
+
+            <button type="button" class="class-card senior-class" data-class="Class 9">
+                <span class="class-card-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                <span class="class-card-name">Class 9</span>
+                <i class="fa-solid fa-chevron-right class-arrow"></i>
+            </button>
+
+            <button type="button" class="class-card senior-class" data-class="Class 10">
+                <span class="class-card-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                <span class="class-card-name">Class 10</span>
+                <i class="fa-solid fa-chevron-right class-arrow"></i>
+            </button>
+
+        </div>
+
+        <div class="library-scroll-hint">
+            <i class="fa-solid fa-arrow-down"></i>
+            Scroll to explore all classes
+        </div>
+
+    </div>
+
+
+    <!-- GROUP SELECTION -->
+
+    <div class="group-selection" id="groupSelection" hidden>
+
+        <div class="library-toolbar">
+
+            <button type="button" class="library-back" id="groupBack">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back
+            </button>
+
+            <button type="button" class="library-close" id="groupClose">
+                <i class="fa-solid fa-xmark"></i>
+                Close
+            </button>
+
+        </div>
+
+        <div class="library-intro">
+
+            <span class="library-label">ACADEMIC GROUPS</span>
+            <h3 id="groupClassTitle">Class 9</h3>
+            <p>Select your group to explore textbooks.</p>
+
+        </div>
+
+        <div class="group-grid">
+
+            <button type="button" class="group-card" data-group="Science">
+                <span class="group-icon">
+                    <i class="fa-solid fa-flask"></i>
+                </span>
+                <span class="group-info">
+                    <strong>Science</strong>
+                    <small>বিজ্ঞান বিভাগ</small>
+                </span>
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <button type="button" class="group-card" data-group="Commerce">
+                <span class="group-icon">
+                    <i class="fa-solid fa-calculator"></i>
+                </span>
+                <span class="group-info">
+                    <strong>Commerce</strong>
+                    <small>ব্যবসায় শিক্ষা বিভাগ</small>
+                </span>
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <button type="button" class="group-card" data-group="Arts">
+                <span class="group-icon">
+                    <i class="fa-solid fa-landmark"></i>
+                </span>
+                <span class="group-info">
+                    <strong>Arts</strong>
+                    <small>মানবিক বিভাগ</small>
+                </span>
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- BOOK LIST -->
+
+    <div class="book-view" id="bookView" hidden>
+
+        <div class="library-toolbar">
+
+            <button type="button" class="library-back" id="bookBack">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back
+            </button>
+
+            <button type="button" class="library-close" id="bookClose">
+                <i class="fa-solid fa-xmark"></i>
+                Close
+            </button>
+
+        </div>
+
+        <div class="book-heading">
+
+            <div>
+                <span class="library-label">TEXTBOOK COLLECTION</span>
+                <h3 id="bookClassTitle">Class 1</h3>
+                <p id="bookGroupTitle">Available textbooks.</p>
+            </div>
+
+            <div class="book-heading-icon">
+                <i class="fa-solid fa-book-open"></i>
+            </div>
+
+        </div>
+
+        <div class="book-summary">
+
+            <span>
+                <i class="fa-solid fa-book"></i>
+                <strong id="bookCount">0</strong>
+                Books Available
+            </span>
+
+            <span class="book-year">2026</span>
+
+        </div>
+
+        <div class="book-list" id="bookList"></div>
+
+        <div class="book-note">
+            <i class="fa-solid fa-circle-info"></i>
+            <p>
+                Please verify textbook titles and optional subjects
+                against the school's approved NCTB curriculum.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- CLOSED VIEW -->
+
+    <div class="library-closed" id="libraryClosed" hidden>
+
+        <div class="closed-icon">
+            <i class="fa-solid fa-book-open"></i>
+        </div>
+
+        <h3>Book Library Closed</h3>
+
+        <p>Explore our class-wise textbooks whenever you need.</p>
+
+        <button type="button" class="btn-library-open" id="reopenLibrary">
+            Explore Classes
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+    </div>
+
+    <div class="curriculum-decoration"></div>
+
+</aside>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- =========================================
+     CLASS ROUTINE
+========================================= -->
+
+<section class="routine-section">
+
+<div class="container">
+
+<div class="routine-panel">
+
+    <div class="routine-header">
+
+        <div class="routine-heading">
+
+            <div class="routine-main-icon">
+                <i class="fa-regular fa-calendar-days"></i>
+            </div>
+
+            <div>
+                <h2>Class Routine</h2>
+                <p id="routine-description">
+                    Here is the routine for Class 6 – Section A.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="routine-actions">
+
+            <div class="routine-select-wrapper">
+
+                <select id="class-select" aria-label="Select class and section">
+                    <option value="6-A">Class 6 – Section A</option>
+                </select>
+
+            </div>
+
+            <button type="button" class="download-btn" id="download-routine">
+                <i class="fa-solid fa-download"></i>
+                Download PDF
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="assembly-bar">
+
+        <i class="fa-regular fa-clock"></i>
+
+        <span>
+            Morning Assembly:
+            <strong id="assembly-time">8:00 AM</strong>
+        </span>
+
+    </div>
+
+
+    <div class="routine-table-wrapper" id="routine-print-area">
+
+        <div class="print-heading">
+            <h2>Sunrise Model School & College</h2>
+            <p id="print-class-name">Class 6 – Section A</p>
+        </div>
+
+        <table class="routine-table">
+
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Sunday</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                </tr>
+            </thead>
+
+            <tbody id="routine-table-body"></tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     BOTTOM STRIP
+========================================= -->
+
+<section class="academic-strip">
+
+    <div class="container strip-content">
+
+        <span class="strip-line"></span>
+
+        <i class="fa-solid fa-graduation-cap"></i>
+
+        <p>
+            Learn <span>•</span> Grow <span>•</span> Achieve
+        </p>
+
+        <span class="strip-line"></span>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- SHARED FOOTER -->
+
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <a href="Home.html" class="footer-logo"><img src="../Images/logo-sun.png" alt="Sunrise Model School logo"></a>
+      <a href="Home.html" class="footer-subtitle"><img src="../Images/logo-wordmark.png" alt="Sunrise Model High School"></a>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/" aria-label="Instagram"><img src="../Images/instagram.png" alt="Instagram"></a><a href="https://www.facebook.com/" aria-label="Facebook"><img src="../Images/facebook.png" alt="Facebook"></a><a href="https://www.youtube.com/" aria-label="YouTube"><img src="../Images/youtube.png" alt="YouTube"></a>
+      </div>
+    </div>
+    <div class="footer-column"><h3>Quick Links</h3><ul>
+      <li><a href="Home.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-column"><h3>Our Programs</h3><ul>
+      <li><a href="programs.html">Primary School</a></li><li><a href="programs.html">Middle School</a></li><li><a href="programs.html">Senior School</a></li><li><a href="programs.html">Co-curricular</a></li>
+    </ul></div>
+    <div class="footer-column"><h3>Resources</h3><ul>
+      <li><a href="academic-calendar.html">Academic Calendar</a></li><li><a href="tuition.html">Fees &amp; Policies</a></li><li><a href="#faqs" data-open-faq>FAQs</a></li>
+    </ul></div>
+    <div class="footer-column footer-contact"><h3>Contact Us</h3><ul>
+      <li><span class="contact-icon">📍</span><span>Your School Address, Bangladesh</span></li>
+      <li><span class="contact-icon">☎</span><a href="tel:+8801XXXXXXXXX">+880 1XXX-XXXXXX</a></li>
+      <li><span class="contact-icon">✉</span><a href="mailto:info@your-school.edu.bd">info@your-school.edu.bd</a></li>
+      <li><span class="contact-icon">◷</span><span>Sunday – Thursday: 8 AM – 4 PM</span></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom"><p>© Sunrise Model School &amp; College. All rights reserved.</p></div>
+</footer>
+
+
+<script src="../js/classes-and-routine.js" defer></script><script src="../js/site-nav.js" defer></script>
+</body></html>

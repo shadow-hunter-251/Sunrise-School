@@ -1,0 +1,41 @@
+
+/* Shared navigation dropdown interaction fix */
+.header, .navbar, .nav-links, .nav-dropdown { overflow: visible !important; }
+.header { position: relative; z-index: 5000 !important; }
+.nav-links { position: relative; z-index: 5001 !important; }
+.nav-dropdown { position: relative !important; isolation: isolate; }
+.nav-dropdown > .nav-parent,
+.nav-dropdown > .dropdown-toggle { position: relative; z-index: 2; }
+.nav-submenu {
+  top: 100% !important;
+  margin-top: 0 !important;
+  z-index: 99999 !important;
+  pointer-events: auto !important;
+}
+.nav-submenu::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -14px;
+  height: 15px;
+  background: transparent;
+}
+.nav-submenu a {
+  position: relative;
+  z-index: 2;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+@media (min-width: 901px) {
+  .nav-dropdown:hover .nav-submenu,
+  .nav-dropdown:focus-within .nav-submenu,
+  .nav-dropdown.submenu-open .nav-submenu { display: flex !important; }
+  .nav-submenu { padding-top: 10px; }
+}
+@media (max-width: 900px) {
+  .nav-submenu { top: auto !important; }
+  .nav-dropdown:hover .nav-submenu { display: none !important; }
+  .nav-dropdown.submenu-open .nav-submenu,
+  .nav-dropdown:focus-within.submenu-open .nav-submenu { display: flex !important; }
+}

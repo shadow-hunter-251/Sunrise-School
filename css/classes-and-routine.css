@@ -1,0 +1,1360 @@
+
+
+/* =========================================
+   1. GLOBAL SETTINGS
+========================================= */
+
+:root {
+    --navy: #2B2118;
+    --navy-light: #4A3A2A;
+    --orange: #ED8B24;
+    --orange-dark: #D67A12;
+    --white: #FFFFFF;
+    --background: #FBF6EC;
+    --soft-bg: #FBF6EC;
+    --text: #2B2118;
+    --muted: #7D6F60;
+    --border: #EFE5D5;
+    --radius: 15px;
+    --container: 1180px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+button, select {
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.container {
+    width: min(var(--container), 92%);
+    margin: auto;
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================
+   2. HERO SECTION
+========================================= */
+
+.academic-hero {
+    position: relative;
+    min-height: 245px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(245,247,248,.97) 0%,
+            rgba(245,247,248,.91) 34%,
+            rgba(245,247,248,.65) 57%,
+            rgba(245,247,248,.20) 100%
+        ),
+        url("../Images/Hero/classes and routine hero.jpg");
+
+    background-size: cover;
+    background-position: center 45%;
+    background-repeat: no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(43,33,24,.03),
+        transparent
+    );
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px 0;
+}
+
+.hero-breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 15px;
+    background: rgba(255,255,255,.9);
+    border: 1px solid rgba(43,33,24,.12);
+    border-radius: 30px;
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.hero-breadcrumb i {
+    color: var(--orange);
+    font-size: 16px;
+}
+
+.hero-content h1 {
+    color: var(--navy);
+    font-size: clamp(38px,5vw,56px);
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1.2;
+}
+
+.hero-content h1 span {
+    color: var(--orange);
+}
+
+.hero-content p {
+    color: #6B5D4F;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.hero-line {
+    width: 125px;
+    height: 3px;
+    background: var(--orange);
+    margin-top: 14px;
+}
+
+
+/* =========================================
+   3. ACADEMIC INFORMATION LAYOUT
+========================================= */
+
+.academic-section {
+    padding: 22px 0 12px;
+}
+
+.academic-layout {
+    display: grid;
+    grid-template-columns: minmax(0,2.05fr) minmax(280px,.9fr);
+    gap: 15px;
+    align-items: stretch;
+}
+
+.information-panel,
+.curriculum-panel,
+.routine-panel {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: white;
+    box-shadow: 0 4px 18px rgba(43,33,24,.035);
+}
+
+
+/* =========================================
+   4. CLASS INFORMATION
+========================================= */
+
+.information-panel {
+    padding: 19px;
+    min-width: 0;
+}
+
+.panel-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 15px;
+}
+
+.heading-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #FBF6EC;
+    color: var(--navy);
+    font-size: 21px;
+}
+
+.panel-heading h2 {
+    color: var(--navy);
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -.5px;
+}
+
+.panel-heading p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+
+/* CLASS TABLE */
+
+.class-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+}
+
+.class-table {
+    width: 100%;
+    min-width: 580px;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: left;
+}
+
+.class-table th {
+    background: var(--navy);
+    color: white;
+    padding: 11px 13px;
+    font-size: 13px;
+    font-weight: 800;
+    white-space: nowrap;
+    border-right: 1px solid rgba(255,255,255,.12);
+}
+
+.class-table th:first-child {
+    border-radius: 8px 0 0 0;
+}
+
+.class-table th:last-child {
+    border-radius: 0 8px 0 0;
+    border-right: none;
+}
+
+.class-table th i {
+    margin-right: 5px;
+}
+
+.class-table td {
+    padding: 9px 13px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+}
+
+.class-table td:last-child {
+    border-right: none;
+    text-align: center;
+}
+
+.class-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.class-table tbody tr:hover td {
+    background: #FFF9F0;
+}
+
+.class-table tbody td:first-child {
+    color: var(--navy);
+    font-weight: 800;
+}
+
+.class-table tfoot td {
+    background: #FBF6EC;
+    color: var(--navy);
+    font-weight: 800;
+    padding: 11px 13px;
+}
+
+.class-table tfoot td:last-child {
+    color: var(--orange);
+    font-size: 14px;
+}
+
+
+/* SECTION BADGES */
+
+.section-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.section-badge {
+    display: inline-block;
+    background: #FBF6EC;
+    color: #6B5D4F;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* SHIFT BADGES */
+
+.shift-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.shift-morning {
+    background: #FFF0EA;
+    color: #B9532D;
+}
+
+.shift-day {
+    background: #EAF1F7;
+    color: #B8620A;
+}
+
+
+/* =========================================
+   5. CURRICULUM BOOK LIBRARY
+========================================= */
+
+.curriculum-panel {
+    --lib-navy: #2B2118;
+    --lib-orange: #ED8B24;
+    --lib-light: #FFF1E9;
+    --lib-border: #EFE5D5;
+    --lib-muted: #7D6F60;
+
+    position: relative;
+    isolation: isolate;
+    min-width: 0;
+    height: 100%;
+    min-height: 690px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 19px;
+    overflow: hidden;
+
+    background: #F8FAFC;
+    border: 1px solid var(--lib-border);
+    border-radius: var(--radius);
+}
+
+.curriculum-panel *,
+.curriculum-panel *::before,
+.curriculum-panel *::after {
+    box-sizing: border-box;
+}
+
+.curriculum-panel [hidden] {
+    display: none !important;
+}
+
+
+/* LIBRARY HEADER */
+
+.curriculum-heading {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--lib-border);
+}
+
+.curriculum-icon {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: #FBF6EC;
+    color: var(--lib-navy);
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.curriculum-heading h2 {
+    color: var(--lib-navy);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.curriculum-heading p {
+    color: var(--lib-muted);
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+
+/* HOME VIEW */
+
+.curriculum-home {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.library-intro {
+    flex-shrink: 0;
+    margin: 17px 0 13px;
+}
+
+.library-label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--lib-orange);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.library-intro h3 {
+    color: var(--lib-navy);
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.library-intro p {
+    color: var(--lib-muted);
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+
+/* ONE COLUMN SCROLLABLE CLASS LIST */
+
+.class-grid {
+    flex: 1;
+    min-height: 0;
+    max-height: 430px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 2px 6px 3px 0;
+
+    scrollbar-width: thin;
+    scrollbar-color: #CDBFAE #FBF6EC;
+}
+
+.class-grid::-webkit-scrollbar,
+.book-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.class-grid::-webkit-scrollbar-track,
+.book-list::-webkit-scrollbar-track {
+    background: #FBF6EC;
+    border-radius: 10px;
+}
+
+.class-grid::-webkit-scrollbar-thumb,
+.book-list::-webkit-scrollbar-thumb {
+    background: #CDBFAE;
+    border-radius: 10px;
+}
+
+
+/* CLASS BUTTONS */
+
+.class-card {
+    width: 100%;
+    min-height: 49px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 7px 10px;
+
+    color: var(--lib-navy);
+    background: white;
+
+    border: 1px solid var(--lib-border);
+    border-radius: 8px;
+
+    text-align: left;
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.class-card:hover,
+.class-card:focus-visible {
+    background: var(--lib-navy);
+    color: white;
+    border-color: var(--lib-navy);
+    outline: none;
+}
+
+.class-card-icon {
+    width: 33px;
+    height: 33px;
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    background: #FBF6EC;
+    color: var(--lib-navy);
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+.class-card:hover .class-card-icon,
+.class-card:focus-visible .class-card-icon {
+    background: rgba(255,255,255,.15);
+    color: #FFC28D;
+}
+
+.class-card-name {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.class-arrow {
+    color: var(--lib-orange);
+    font-size: 13px;
+}
+
+.class-card:hover .class-arrow {
+    color: white;
+}
+
+.senior-class {
+    background: var(--lib-light);
+    border-color: #F1D6C9;
+}
+
+.senior-class .class-card-icon {
+    background: white;
+    color: var(--lib-orange);
+}
+
+.library-scroll-hint {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding-top: 10px;
+    color: var(--lib-muted);
+    font-size: 13px;
+}
+
+.library-scroll-hint i {
+    color: var(--lib-orange);
+}
+
+
+/* =========================================
+   GROUP SELECTION
+========================================= */
+
+.group-selection,
+.book-view {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.library-toolbar {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.library-back,
+.library-close {
+    min-height: 39px;
+    padding: 8px 11px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.library-back {
+    color: var(--lib-navy);
+    background: #FBF6EC;
+    border: 1px solid #DDE5EC;
+}
+
+.library-close {
+    color: #B94D30;
+    background: var(--lib-light);
+    border: 1px solid #F2D6C9;
+}
+
+.library-back:hover {
+    color: white;
+    background: var(--lib-navy);
+}
+
+.library-close:hover {
+    color: white;
+    background: var(--lib-orange);
+}
+
+.group-selection .library-intro {
+    margin-top: 20px;
+}
+
+.group-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.group-card {
+    width: 100%;
+    min-height: 68px;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    color: var(--lib-navy);
+    background: white;
+    border: 1px solid var(--lib-border);
+    border-radius: 9px;
+
+    text-align: left;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.group-card:hover {
+    background: #FFF8EE;
+    border-color: var(--lib-orange);
+}
+
+.group-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: var(--lib-light);
+    color: var(--lib-orange);
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.group-info {
+    flex: 1;
+}
+
+.group-card strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.group-card small {
+    display: block;
+    margin-top: 3px;
+    color: var(--lib-muted);
+    font-size: 13px;
+}
+
+.group-card > i {
+    color: var(--lib-orange);
+}
+
+
+/* =========================================
+   BOOK VIEW
+========================================= */
+
+.book-view {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-view[hidden] {
+    display: none !important;
+}
+
+.book-heading {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 17px;
+}
+
+.book-heading h3 {
+    color: var(--lib-navy);
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.book-heading p {
+    color: var(--lib-muted);
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.book-heading-icon {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: var(--lib-navy);
+    color: white;
+    border-radius: 50%;
+    font-size: 19px;
+}
+
+.book-summary {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 13px 0 10px;
+    padding: 10px;
+    background: #FBF6EC;
+    border-radius: 7px;
+}
+
+.book-summary span {
+    color: var(--lib-navy);
+    font-size: 13px;
+}
+
+.book-summary i {
+    color: var(--lib-orange);
+}
+
+.book-year {
+    font-weight: 800;
+}
+
+.book-list {
+    flex: 1;
+    min-height: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 2px 5px 5px 0;
+
+    scrollbar-width: thin;
+    scrollbar-color: #CDBFAE #FBF6EC;
+}
+
+.book-card {
+    flex-shrink: 0;
+    min-height: 58px;
+    padding: 9px;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    background: white;
+    border: 1px solid var(--lib-border);
+    border-radius: 8px;
+}
+
+.book-card-icon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: var(--lib-light);
+    color: var(--lib-orange);
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+.book-card-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.book-card-content h4 {
+    color: var(--lib-navy);
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.book-card-content p {
+    color: var(--lib-muted);
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+.book-type {
+    flex-shrink: 0;
+    padding: 5px 7px;
+    background: #FBF6EC;
+    color: var(--lib-navy);
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.book-note {
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 9px;
+    background: #FFF7F1;
+    border: 1px solid #F3E0D5;
+    border-radius: 7px;
+}
+
+.book-note i {
+    color: var(--lib-orange);
+    margin-top: 3px;
+}
+
+.book-note p {
+    color: #735D50;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* CLOSED VIEW */
+
+.library-closed {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.closed-icon {
+    width: 62px;
+    height: 62px;
+    margin-bottom: 14px;
+    display: grid;
+    place-items: center;
+    background: var(--lib-light);
+    color: var(--lib-orange);
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+.library-closed h3 {
+    color: var(--lib-navy);
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.library-closed p {
+    margin: 8px 0 16px;
+    color: var(--lib-muted);
+    font-size: 13px;
+}
+
+.btn-library-open {
+    min-height: 41px;
+    padding: 9px 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    background: var(--lib-orange);
+    border: 0;
+    border-radius: 7px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.btn-library-open:hover {
+    background: var(--lib-navy);
+}
+
+.curriculum-decoration {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    right: -65px;
+    bottom: -65px;
+    border-radius: 50%;
+    background: rgba(237,139,36,.07);
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* =========================================
+   6. CLASS ROUTINE
+========================================= */
+
+.routine-section {
+    padding: 12px 0 22px;
+}
+
+.routine-panel {
+    padding: 19px;
+}
+
+.routine-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 14px;
+}
+
+.routine-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.routine-main-icon {
+    width: 47px;
+    height: 47px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: #FBF6EC;
+    border-radius: 10px;
+    color: var(--navy);
+    font-size: 22px;
+}
+
+.routine-heading h2 {
+    color: var(--navy);
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.routine-heading p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+.routine-actions {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.routine-select-wrapper select {
+    width: 210px;
+    height: 40px;
+    padding: 0 10px;
+    background: white;
+    color: var(--navy);
+    border: 1px solid #DDE3E8;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+}
+
+.routine-select-wrapper select:focus {
+    border-color: var(--orange);
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 40px;
+    padding: 0 14px;
+    background: var(--orange);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 800;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.download-btn:hover {
+    background: var(--orange-dark);
+}
+
+.assembly-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: #FFF4E3;
+    color: var(--navy);
+    border: 1px solid #F6E3D9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.assembly-bar > i,
+.assembly-bar strong {
+    color: var(--orange);
+}
+
+.routine-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+}
+
+.routine-table {
+    width: 100%;
+    min-width: 550px;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: center;
+}
+
+.routine-table thead th {
+    background: var(--navy);
+    color: white;
+    padding: 11px 12px;
+    font-size: 13px;
+    font-weight: 800;
+    border-right: 1px solid rgba(255,255,255,.15);
+}
+
+.routine-table thead th:first-child {
+    border-radius: 8px 0 0 0;
+}
+
+.routine-table thead th:last-child {
+    border-radius: 0 8px 0 0;
+    border-right: none;
+}
+
+.routine-table tbody td {
+    padding: 9px 12px;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 700;
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+}
+
+.routine-table tbody td:last-child {
+    border-right: none;
+}
+
+.routine-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.routine-table tbody td:first-child {
+    color: var(--navy);
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.routine-table tbody tr:hover td {
+    background: #FFF9F0;
+}
+
+.routine-table .break-row td {
+    background: #FFF4E3;
+    color: var(--orange);
+    font-weight: 800;
+}
+
+
+/* PRINT */
+
+.print-heading {
+    display: none;
+}
+
+@media print {
+    @page {
+        size: landscape;
+        margin: 15mm;
+    }
+
+    body * {
+        visibility: hidden !important;
+    }
+
+    #routine-print-area,
+    #routine-print-area * {
+        visibility: visible !important;
+    }
+
+    #routine-print-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        overflow: visible;
+        border: none;
+    }
+
+    .print-heading {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .print-heading h2 {
+        color: var(--navy);
+        font-size: 22px;
+    }
+
+    .print-heading p {
+        font-size: 14px;
+    }
+
+    .routine-table {
+        min-width: 0;
+    }
+
+    .routine-table th,
+    .routine-table td {
+        border: 1px solid #D5DADF !important;
+        color: #2B2118 !important;
+        padding: 12px;
+    }
+
+    .routine-table th {
+        background: #EFE5D5 !important;
+    }
+}
+
+
+/* =========================================
+   7. BOTTOM ACADEMIC STRIP
+========================================= */
+
+.academic-strip {
+    background: #FBF6EC;
+    border-top: 1px solid var(--border);
+    border-bottom: 4px solid var(--navy);
+    padding: 19px 0;
+}
+
+.strip-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.strip-line {
+    width: min(25%,220px);
+    height: 1px;
+    background: #BAC6D0;
+}
+
+.strip-content > i {
+    color: var(--orange);
+    font-size: 28px;
+}
+
+.strip-content p {
+    color: var(--navy);
+    font-size: 16px;
+    font-weight: 800;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.strip-content p span {
+    color: var(--orange);
+    margin: 0 5px;
+}
+
+
+/* =========================================
+   8. RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 950px) {
+
+    .academic-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .curriculum-panel {
+        height: auto;
+        min-height: 0;
+    }
+
+    .curriculum-home {
+        flex: initial;
+    }
+
+    .class-grid {
+        max-height: 430px;
+    }
+
+    .group-selection {
+        padding-bottom: 15px;
+    }
+
+    .book-view {
+        min-height: 480px;
+    }
+
+    .routine-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .routine-actions {
+        width: 100%;
+    }
+
+    .routine-select-wrapper {
+        flex: 1;
+    }
+
+    .routine-select-wrapper select {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .academic-hero {
+        min-height: 215px;
+        background-position: 58% center;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+        letter-spacing: -1px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+        max-width: 330px;
+    }
+
+    .academic-section {
+        padding-top: 14px;
+    }
+
+    .information-panel,
+    .curriculum-panel,
+    .routine-panel {
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    .panel-heading h2 {
+        font-size: 18px;
+    }
+
+    .heading-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+
+    .curriculum-heading h2 {
+        font-size: 17px;
+    }
+
+    .class-grid {
+        max-height: 390px;
+    }
+
+    .class-card {
+        min-height: 51px;
+    }
+
+    .book-type {
+        display: none;
+    }
+
+    .book-view {
+        min-height: 470px;
+    }
+
+    .routine-heading h2 {
+        font-size: 20px;
+    }
+
+    .routine-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .routine-select-wrapper select,
+    .download-btn {
+        width: 100%;
+        height: 42px;
+    }
+
+    .strip-content {
+        gap: 9px;
+    }
+
+    .strip-line {
+        width: 10%;
+    }
+
+    .strip-content p {
+        font-size: 13px;
+    }
+
+    .strip-content > i {
+        font-size: 22px;
+    }
+}
+

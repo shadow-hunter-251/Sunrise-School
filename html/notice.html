@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notices & Events | Sunrise Model School & College</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="../css/notice.css">
+  <link rel="stylesheet" href="../css/shared-nav-fix.css">
+<link rel="stylesheet" href="../css/site-enhancements.css">
+  <link rel="stylesheet" href="../css/global-nav.css">
+  <link rel="stylesheet" href="../css/sunrise-theme.css">
+</head>
+<body>
+
+
+    <!-- NAVBAR -->
+    <header class="header" id="header"><div class="container navbar"><a class="brand" href="Home.html" aria-label="Sunrise Model School home"><img class="logo-img logo-sun" src="../Images/logo-sun.png" alt="Sunrise Model School logo"><img class="logo-sub" src="../Images/logo-wordmark.png" alt="Sunrise Model High School"></a><nav class="nav-links" id="navLinks" aria-label="Main navigation"><a href="Home.html" data-page="Home.html">Home</a><a href="about.html" data-page="about.html">About</a><div class="nav-dropdown" id="academicDropdown"><a class="nav-parent" href="academic-calendar.html" data-page="academic-calendar.html">Academics</a><button class="dropdown-toggle" type="button" aria-label="Show academic links" aria-expanded="false" aria-controls="academicSubmenu">⌄</button><div class="nav-submenu" id="academicSubmenu"><a href="Classes%20%26%20Routine.html" data-page="Classes & Routine.html">Classes &amp; Routine</a><a href="academic-calendar.html" data-page="academic-calendar.html">Academic Routine</a><a href="tuition.html" data-page="tuition.html">Tuition</a><a href="exam.html" data-page="exam.html">Exam</a><a href="faculty.html" data-page="faculty.html">Faculty</a></div></div><a href="admission.html" data-page="admission.html">Admission</a><a href="notice.html" data-page="notice.html">Notice &amp; Events</a><a href="facilities.html" data-page="facilities.html">Facilities</a><a href="contact.html" data-page="contact.html">Contact Us</a></nav><a class="nav-apply" href="contact.html">Apply Now <span>↗</span></a><button aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle" id="menuToggle" type="button">☰</button></div></header>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="notice-hero">
+
+        <div class="notice-hero-overlay"></div>
+
+        <div class="notice-hero-content">
+
+            <div class="hero-label">
+                <i class="fa-solid fa-bullhorn"></i>
+                Latest Updates
+            </div>
+
+            <h1>
+                Stay Updated With
+                <span>School Activities</span>
+            </h1>
+
+            <p>
+                Stay informed about the latest school announcements,
+                academic updates, upcoming events, holidays and important activities.
+            </p>
+
+            <div class="hero-meta">
+                <i class="fa-regular fa-calendar-days"></i>
+                Academic Year 2026
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <main class="notice-container">
+
+
+        <!-- NOTICE BOARD TABS -->
+
+        <div class="notice-tabs">
+
+            <button class="notice-tab active" data-tab="notices">
+
+                <i class="fa-solid fa-paper-plane"></i>
+                Notice Board
+
+            </button>
+
+            <button class="notice-tab" data-tab="events">
+
+                <i class="fa-regular fa-calendar-days"></i>
+                School Events
+
+            </button>
+
+        </div>
+
+
+        <!-- =====================================
+             NOTICE BOARD
+        ====================================== -->
+
+        <section class="notice-panel tab-content active" id="notices">
+
+            <div class="panel-heading">
+
+                <div class="section-title">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    <div>
+                        <h2>Latest Notices</h2>
+                        <p>Official announcements from the school authority.</p>
+                    </div>
+
+                </div>
+
+                <div class="notice-count">
+                    <span id="noticeCount">12</span> Published Notices
+                    <button class="circle-action" id="showAllNotices"
+                        aria-label="Show all notices">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+            </div>
+
+
+            <div class="notice-board-layout">
+
+
+                <!-- CATEGORY SIDEBAR -->
+
+                <aside class="notice-categories">
+
+                    <button class="category-btn active" data-category="all">
+                        <i class="fa-solid fa-bullhorn"></i>
+                        General Notice
+                    </button>
+
+                    <button class="category-btn" data-category="academic">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Academic Notice
+                    </button>
+
+                    <button class="category-btn" data-category="examination">
+                        <i class="fa-solid fa-file-lines"></i>
+                        Examination Notice
+                    </button>
+
+                    <button class="category-btn" data-category="holiday">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        Holiday Notice
+                    </button>
+
+                    <button class="category-btn" data-category="admission">
+                        <i class="fa-solid fa-user-group"></i>
+                        Admission Notice
+                    </button>
+
+                    <button class="category-btn" data-category="parents">
+                        <i class="fa-solid fa-users"></i>
+                        Parents' Notice
+                    </button>
+
+                    <button class="category-btn" data-category="teachers">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        Teachers' Notice
+                    </button>
+
+                </aside>
+
+
+                <!-- NOTICE LIST -->
+
+                <div class="notice-list" id="noticeList">
+
+                    <!-- Generated by JavaScript -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             UPCOMING EVENTS + CALENDAR
+        ====================================== -->
+
+        <section class="events-calendar-grid tab-content" id="events">
+
+            <!-- UPCOMING EVENTS -->
+
+            <div class="events-panel">
+
+                <div class="panel-heading">
+
+                    <div class="section-title">
+
+                        <i class="fa-regular fa-calendar-check"></i>
+
+                        <div>
+                            <h2>Upcoming Events</h2>
+                            <p>Be a part of our exciting school programmes and activities.</p>
+                        </div>
+
+                    </div>
+
+                    <button class="text-action" id="viewAllEvents">
+                        View All Events
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="event-cards" id="eventCards">
+
+                    <!-- Generated by JavaScript -->
+
+                </div>
+
+            </div>
+
+
+            <!-- EVENT CALENDAR -->
+
+            <aside class="calendar-panel">
+
+                <div class="section-title">
+
+                    <i class="fa-regular fa-calendar-days"></i>
+
+                    <h2>Event Calendar</h2>
+
+                </div>
+
+
+                <div class="calendar-navigation">
+
+                    <button id="previousMonth" aria-label="Previous month">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <h3 id="calendarMonth">November 2026</h3>
+
+                    <button id="nextMonth" aria-label="Next month">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="calendar-grid">
+
+                    <div class="calendar-weekdays">
+                        <span>S</span>
+                        <span>M</span>
+                        <span>T</span>
+                        <span>W</span>
+                        <span>T</span>
+                        <span>F</span>
+                        <span>S</span>
+                    </div>
+
+                    <div class="calendar-days" id="calendarDays">
+
+                        <!-- Generated by JavaScript -->
+
+                    </div>
+
+                </div>
+
+
+                <div class="calendar-legend">
+
+                    <div>
+                        <span class="legend-dot scheduled"></span>
+                        Event Scheduled
+                    </div>
+
+                    <div>
+                        <span class="legend-dot today"></span>
+                        Today
+                    </div>
+
+                </div>
+
+
+                <div class="selected-event-info" id="selectedEventInfo">
+                    Select a highlighted date to see its events.
+                </div>
+
+            </aside>
+
+        </section>
+
+
+        <!-- =====================================
+             RECENT ACTIVITIES + ANNOUNCEMENT
+        ====================================== -->
+
+        <section class="activities-announcement-grid">
+
+
+            <!-- RECENT SCHOOL ACTIVITIES -->
+
+            <div class="activities-panel">
+
+                <div class="panel-heading">
+
+                    <div class="section-title">
+
+                        <i class="fa-solid fa-camera"></i>
+
+                        <div>
+                            <h2>Recent School Activities</h2>
+                            <p>Moments from our school life.</p>
+                        </div>
+
+                    </div>
+
+                    <a href="gallery.html" class="text-action">
+                        View Gallery
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="activity-gallery">
+
+                    <a href="../Images/School Co-Curricular Activities in Action.png"
+                       class="activity-photo"
+                       target="_blank"
+                       aria-label="View school activity 1">
+
+                        <img src="../Images/School Co-Curricular Activities in Action.png"
+                             alt="School students participating in activities">
+
+                    </a>
+
+                    <a href="../Images/Focused Study in a Sunlit Classroom.png"
+                       class="activity-photo"
+                       target="_blank"
+                       aria-label="View school activity 2">
+
+                        <img src="../Images/Focused Study in a Sunlit Classroom.png"
+                             alt="Students at a school programme">
+
+                    </a>
+
+                    <a href="../Images/Collaborative Physics Study in a Bright Classroom.png"
+                       class="activity-photo"
+                       target="_blank"
+                       aria-label="View school activity 3">
+
+                        <img src="../Images/Collaborative Physics Study in a Bright Classroom.png"
+                             alt="School celebration">
+
+                    </a>
+
+                    <a href="../Images/Bright Classroom Dreams.png"
+                       class="activity-photo"
+                       target="_blank"
+                       aria-label="View school activity 4">
+
+                        <img src="../Images/Bright Classroom Dreams.png"
+                             alt="School meeting and activities">
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- IMPORTANT ANNOUNCEMENT -->
+
+            <div class="announcement-panel">
+
+                <div class="announcement-heading">
+
+                    <div class="section-title">
+
+                        <i class="fa-solid fa-bullhorn"></i>
+
+                        <h2>Important Announcement</h2>
+
+                    </div>
+
+                    <span class="urgent-label">Urgent</span>
+
+                </div>
+
+
+                <div class="announcement-content">
+
+                    <h3>Annual Examination Preparation</h3>
+
+                    <p>
+                        All students of Classes 6–10 are advised to complete
+                        their examination preparation according to the
+                        published syllabus.
+                    </p>
+
+                    <div class="announcement-date">
+
+                        <i class="fa-regular fa-calendar-days"></i>
+
+                        Published: 09 November 2026
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================
+         NOTICE DETAIL MODAL
+    ====================================== -->
+
+    <div class="notice-modal" id="noticeModal">
+
+        <div class="modal-content">
+
+            <button class="modal-close" id="closeModal"
+                aria-label="Close notice">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="modal-icon">
+                <i class="fa-solid fa-file-lines"></i>
+            </div>
+
+            <span class="modal-category" id="modalCategory">Academic</span>
+
+            <h2 id="modalTitle">Notice Title</h2>
+
+            <div class="modal-date" id="modalDate"></div>
+
+            <p id="modalDescription"></p>
+
+            <button class="modal-download" id="modalDownload" hidden>
+                <i class="fa-solid fa-download"></i>
+                Download Notice PDF
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <a href="Home.html" class="footer-logo"><img src="../Images/logo-sun.png" alt="Sunrise Model School logo"></a>
+      <a href="Home.html" class="footer-subtitle"><img src="../Images/logo-wordmark.png" alt="Sunrise Model High School"></a>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/" aria-label="Instagram"><img src="../Images/instagram.png" alt="Instagram"></a><a href="https://www.facebook.com/" aria-label="Facebook"><img src="../Images/facebook.png" alt="Facebook"></a><a href="https://www.youtube.com/" aria-label="YouTube"><img src="../Images/youtube.png" alt="YouTube"></a>
+      </div>
+    </div>
+    <div class="footer-column"><h3>Quick Links</h3><ul>
+      <li><a href="Home.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div class="footer-column"><h3>Our Programs</h3><ul>
+      <li><a href="programs.html">Primary School</a></li><li><a href="programs.html">Middle School</a></li><li><a href="programs.html">Senior School</a></li><li><a href="programs.html">Co-curricular</a></li>
+    </ul></div>
+    <div class="footer-column"><h3>Resources</h3><ul>
+      <li><a href="academic-calendar.html">Academic Calendar</a></li><li><a href="tuition.html">Fees &amp; Policies</a></li><li><a href="#faqs" data-open-faq>FAQs</a></li>
+    </ul></div>
+    <div class="footer-column footer-contact"><h3>Contact Us</h3><ul>
+      <li><span class="contact-icon">📍</span><span>Your School Address, Bangladesh</span></li>
+      <li><span class="contact-icon">☎</span><a href="tel:+8801XXXXXXXXX">+880 1XXX-XXXXXX</a></li>
+      <li><span class="contact-icon">✉</span><a href="mailto:info@your-school.edu.bd">info@your-school.edu.bd</a></li>
+      <li><span class="contact-icon">◷</span><span>Sunday – Thursday: 8 AM – 4 PM</span></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom"><p>© Sunrise Model School &amp; College. All rights reserved.</p></div>
+</footer>
+
+
+
+    <script src="../js/notice.js" defer></script>
+<script src="../js/site-nav.js" defer></script>
+</body>
+</html>
